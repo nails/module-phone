@@ -52,9 +52,10 @@ class GbTest extends TestCase
         /** @var Parser\Gb $oParser */
         $oParser = Factory::factory('ParserGb', Constants::MODULE_SLUG);
 
+        $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('0207 729 6043'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('02077296043'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('02077296043x123'));
-        $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('+44(0)2077296043x123'));
+        $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('+44 (0) 2077296043x123'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('+442077296043x123'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('00442077296043x123'));
     }
@@ -72,6 +73,6 @@ class GbTest extends TestCase
         $oParser = Factory::factory('ParserGb', Constants::MODULE_SLUG);
 
         $this->expectException(ValidationException::class);
-        $oParser->parse('NOT A PHONE NUMBER');
+        $oParser->parse('0207 729 604');
     }
 }
