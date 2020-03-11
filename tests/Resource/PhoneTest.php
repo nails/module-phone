@@ -149,7 +149,6 @@ class PhoneTest extends TestCase
      */
     public function test_is_valid_fails_with_invalid_data()
     {
-        $this->expectException(ValidationException::class);
         /** @var Resource\Phone $oPhone */
         $oPhone = Factory::resource('Phone', Constants::MODULE_SLUG, []);
         $this->assertFalse($oPhone->isValid());
