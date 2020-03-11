@@ -93,6 +93,11 @@ class Gb implements Interfaces\Formatter
 
     // --------------------------------------------------------------------------
 
+    /**
+     * Formats as a string
+     *
+     * @return string
+     */
     public function __toString()
     {
         return trim(

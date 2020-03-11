@@ -30,10 +30,30 @@ interface Formatter
      */
     public function asJson(): string;
 
+    // --------------------------------------------------------------------------
+
     /**
      * formats as an array
      *
      * @return array
      */
     public function asArray(): array;
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Format as a URL
+     *
+     * @return string
+     */
+    public function asUrl(): string;
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Formats as a string
+     *
+     * @return string
+     */
+    public function __toString();
 }
