@@ -8,7 +8,7 @@ use Nails\Phone\Interfaces\Validator;
 use Nails\Phone\Resource\Phone;
 
 /**
- * Formats a phone number for Us
+ * Formats a phone number for US
  *
  * @package Nails\Phone\Validator
  */

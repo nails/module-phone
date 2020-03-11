@@ -19,8 +19,8 @@ class Constants
     /**
      * The country strings
      */
-    const COUNTRY_GB = 'Gb';
-    const COUNTRY_US = 'Us';
+    const COUNTRY_GB = 'GB';
+    const COUNTRY_US = 'US';
 
     /**
      * The country codes

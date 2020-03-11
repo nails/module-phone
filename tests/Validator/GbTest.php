@@ -37,7 +37,7 @@ class GbTest extends TestCase
     {
         $this->assertInstanceOf(
             Validator\Gb::class,
-            Factory::factory('ValidatorGb', Constants::MODULE_SLUG)
+            Factory::factory('ValidatorGB', Constants::MODULE_SLUG)
         );
     }
 
@@ -109,7 +109,7 @@ class GbTest extends TestCase
     private function getValidator(): Validator\Gb
     {
         /** @var Validator\Gb $oValidator */
-        $oValidator = Factory::factory('ValidatorGb', Constants::MODULE_SLUG);
+        $oValidator = Factory::factory('ValidatorGB', Constants::MODULE_SLUG);
         return $oValidator;
     }
 }

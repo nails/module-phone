@@ -82,7 +82,7 @@ class Phone
      * @throws ValidationException
      * @throws PhoneException
      */
-    public function validate(Resource\Phone $oPhone, $oValidator = null)
+    public function validate(Resource\Phone $oPhone, $oValidator)
     {
         if (is_string($oValidator)) {
             $oValidator = static::getValidatorForCountry($oValidator);
@@ -108,7 +108,7 @@ class Phone
     public static function getFormatterForCountry(string $sCountry): Interfaces\Formatter
     {
         /** @var Interfaces\Formatter $oFormatter */
-        $oFormatter = Factory::factory('Formatter' . $sCountry, Constants::MODULE_SLUG);
+        $oFormatter = Factory::factory('Formatter' . strtoupper($sCountry), Constants::MODULE_SLUG);
         return $oFormatter;
     }
 
@@ -125,7 +125,7 @@ class Phone
     public static function getParserForCountry(string $sCountry): Interfaces\Parser
     {
         /** @var Interfaces\Parser $oParser */
-        $oParser = Factory::factory('Parser' . $sCountry, Constants::MODULE_SLUG);
+        $oParser = Factory::factory('Parser' . strtoupper($sCountry), Constants::MODULE_SLUG);
         return $oParser;
     }
 
@@ -142,7 +142,7 @@ class Phone
     public static function getValidatorForCountry(string $sCountry): Interfaces\Validator
     {
         /** @var Interfaces\Validator $oValidator */
-        $oValidator = Factory::factory('Validator' . $sCountry, Constants::MODULE_SLUG);
+        $oValidator = Factory::factory('Validator' . strtoupper($sCountry), Constants::MODULE_SLUG);
         return $oValidator;
     }
 }

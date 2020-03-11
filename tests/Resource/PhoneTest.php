@@ -26,7 +26,7 @@ class PhoneTest extends TestCase
         /** @var Resource\Phone $oPhone */
         $oPhone = Factory::resource('Phone', Constants::MODULE_SLUG, []);
         /** @var Formatter\Gb $oFormatter */
-        $oFormatter = Factory::factory('FormatterGb', Constants::MODULE_SLUG);
+        $oFormatter = Factory::factory('FormatterGB', Constants::MODULE_SLUG);
 
         $this->assertInstanceOf(
             Formatter\Gb::class,

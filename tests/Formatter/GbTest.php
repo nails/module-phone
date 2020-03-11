@@ -37,7 +37,7 @@ class GbTest extends TestCase
     {
         $this->assertInstanceOf(
             Formatter\Gb::class,
-            Factory::factory('FormatterGb', Constants::MODULE_SLUG)
+            Factory::factory('FormatterGB', Constants::MODULE_SLUG)
         );
     }
 
@@ -138,7 +138,7 @@ class GbTest extends TestCase
     private function getFormatter(Resource\Phone $oPhone = null): Formatter\Gb
     {
         /** @var Formatter\Gb $oFormatter */
-        $oFormatter = Factory::factory('FormatterGb', Constants::MODULE_SLUG);
+        $oFormatter = Factory::factory('FormatterGB', Constants::MODULE_SLUG);
 
         if ($oPhone) {
             $oFormatter->setPhone($oPhone);

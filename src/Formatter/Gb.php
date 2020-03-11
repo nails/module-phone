@@ -6,7 +6,7 @@ use Nails\Phone\Interfaces;
 use Nails\Phone\Resource\Phone;
 
 /**
- * Formats a phone number for Gb
+ * Formats a phone number for GB
  *
  * @package Nails\Phone\Formatter
  */

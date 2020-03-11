@@ -12,7 +12,7 @@ use Nails\Phone\Resource;
 use Nails\Phone\Service\Phone;
 
 /**
- * Formats a phone number for Gb
+ * Formats a phone number for GB
  *
  * @package Nails\Phone\Parser
  */

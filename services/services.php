@@ -24,14 +24,14 @@ return [
     ],
 
     'factories' => [
-        'FormatterGb' => function (): Formatter\Gb {
+        'FormatterGB' => function (): Formatter\Gb {
             if (class_exists('\App\Phone\Formater\Gb')) {
                 return new \App\Phone\Formatter\Gb();
             } else {
                 return new Formatter\Gb();
             }
         },
-        'FormatterUs' => function (): Formatter\Us {
+        'FormatterUS' => function (): Formatter\Us {
             if (class_exists('\App\Phone\Formater\Us')) {
                 return new \App\Phone\Formatter\Us();
             } else {
@@ -39,14 +39,14 @@ return [
             }
         },
 
-        'ParserGb' => function (): Parser\Gb {
+        'ParserGB' => function (): Parser\Gb {
             if (class_exists('\App\Phone\Formater\Gb')) {
                 return new \App\Phone\Parser\Gb();
             } else {
                 return new Parser\Gb();
             }
         },
-        'ParserUs' => function (): Parser\Us {
+        'ParserUS' => function (): Parser\Us {
             if (class_exists('\App\Phone\Formater\Us')) {
                 return new \App\Phone\Parser\Us();
             } else {
@@ -54,14 +54,14 @@ return [
             }
         },
 
-        'ValidatorGb' => function (): Validator\Gb {
+        'ValidatorGB' => function (): Validator\Gb {
             if (class_exists('\App\Phone\Formater\Gb')) {
                 return new \App\Phone\Validator\Gb();
             } else {
                 return new Validator\Gb();
             }
         },
-        'ValidatorUs' => function (): Validator\Us {
+        'ValidatorUS' => function (): Validator\Us {
             if (class_exists('\App\Phone\Formater\Us')) {
                 return new \App\Phone\Validator\Us();
             } else {

@@ -37,7 +37,7 @@ class GbTest extends TestCase
     {
         $this->assertInstanceOf(
             Parser\Gb::class,
-            Factory::factory('ParserGb', Constants::MODULE_SLUG)
+            Factory::factory('ParserGB', Constants::MODULE_SLUG)
         );
     }
     // --------------------------------------------------------------------------
@@ -50,7 +50,7 @@ class GbTest extends TestCase
     public function test_can_parse_with_valid_data()
     {
         /** @var Parser\Gb $oParser */
-        $oParser = Factory::factory('ParserGb', Constants::MODULE_SLUG);
+        $oParser = Factory::factory('ParserGB', Constants::MODULE_SLUG);
 
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('0207 729 6043'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('02077296043'));
@@ -70,7 +70,7 @@ class GbTest extends TestCase
     public function test_exception_thrown_parse_with_invalid_data()
     {
         /** @var Parser\Gb $oParser */
-        $oParser = Factory::factory('ParserGb', Constants::MODULE_SLUG);
+        $oParser = Factory::factory('ParserGB', Constants::MODULE_SLUG);
 
         $this->expectException(ValidationException::class);
         $oParser->parse('0207 729 604');

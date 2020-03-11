@@ -37,7 +37,7 @@ class UsTest extends TestCase
     {
         $this->assertInstanceOf(
             Parser\Us::class,
-            Factory::factory('ParserUs', Constants::MODULE_SLUG)
+            Factory::factory('ParserUS', Constants::MODULE_SLUG)
         );
     }
     // --------------------------------------------------------------------------
@@ -50,7 +50,7 @@ class UsTest extends TestCase
     public function test_can_parse_with_valid_data()
     {
         /** @var Parser\Us $oParser */
-        $oParser = Factory::factory('ParserUs', Constants::MODULE_SLUG);
+        $oParser = Factory::factory('ParserUS', Constants::MODULE_SLUG);
 
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('0011231231234'));
         $this->assertInstanceOf(Resource\Phone::class, $oParser->parse('+11231231234'));
@@ -70,7 +70,7 @@ class UsTest extends TestCase
     public function test_exception_thrown_parse_with_invalid_data()
     {
         /** @var Parser\Us $oParser */
-        $oParser = Factory::factory('ParserUs', Constants::MODULE_SLUG);
+        $oParser = Factory::factory('ParserUS', Constants::MODULE_SLUG);
 
         $this->expectException(ValidationException::class);
         $oParser->parse('NOT A PHONE NUMBER');

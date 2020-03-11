@@ -12,7 +12,7 @@ use Nails\Phone\Resource;
 use Nails\Phone\Service\Phone;
 
 /**
- * Formats a phone number for Us
+ * Formats a phone number for US
  *
  * @package Nails\Phone\Parser
  */
