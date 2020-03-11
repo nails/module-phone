@@ -121,7 +121,7 @@ class ValidateTest extends TestCase
     public function test_validation_fails_with_invalid_data_us()
     {
         $this->expectException(\Nails\Phone\Exception\ValidationException::class);
-        
+
         /** @var Resource\Phone $oPhone */
         $oPhone = Factory::resource(
             'Phone',

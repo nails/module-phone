@@ -36,6 +36,29 @@ class PhoneTest extends TestCase
 
     // --------------------------------------------------------------------------
 
+    public function test_can_cast_as_string()
+    {
+        /** @var Resource\Phone $oPhone */
+        $oPhone = Factory::resource(
+            'Phone',
+            Constants::MODULE_SLUG,
+            [
+                'country'      => Constants::COUNTRY_GB,
+                'country_code' => Constants::COUNTRY_CODE_GB,
+                'area'         => '0207',
+                'local'        => '7296043',
+                'extension'    => '123',
+            ]
+        );
+
+        $this->assertEquals(
+            '+44 (0) 207 729 6043 x123',
+            (string) $oPhone
+        );
+    }
+
+    // --------------------------------------------------------------------------
+
     /**
      * @covers \Nails\Phone\Resource\Phone::validate
      * @throws FactoryException
@@ -52,7 +75,7 @@ class PhoneTest extends TestCase
                 'country'      => Constants::COUNTRY_GB,
                 'country_code' => Constants::COUNTRY_CODE_GB,
                 'area'         => '0207',
-                'local'        => '77266043',
+                'local'        => '7296043',
             ]
         );
         $oPhone->validate();

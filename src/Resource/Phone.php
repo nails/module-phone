@@ -162,4 +162,17 @@ class Phone extends Resource
     {
         return md5($this->formatted()->asJson());
     }
+
+    // --------------------------------------------------------------------------
+
+    /**
+     * Formats the number as a string
+     *
+     * @return string
+     * @throws FactoryException
+     */
+    public function __toString()
+    {
+        return (string) $this->formatted();
+    }
 }
