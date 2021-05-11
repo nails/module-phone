@@ -33,9 +33,9 @@ class Us implements Interfaces\Parser
         );
 
         $iCountry   = Constants::COUNTRY_CODE_US;
-        $sArea      = ArrayHelper::getFromArray(2, $aMatches);
-        $sLocal     = ArrayHelper::getFromArray(3, $aMatches);
-        $sExtension = preg_replace('/[^0-9]/', '', ArrayHelper::getFromArray(4, $aMatches));
+        $sArea      = ArrayHelper::get(2, $aMatches);
+        $sLocal     = ArrayHelper::get(3, $aMatches);
+        $sExtension = preg_replace('/[^0-9]/', '', ArrayHelper::get(4, $aMatches));
 
         if (empty($sArea) || empty($sLocal)) {
             throw new ValidationException(

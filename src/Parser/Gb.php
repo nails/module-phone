@@ -40,9 +40,9 @@ class Gb implements Interfaces\Parser
         );
 
         $iCountry   = Constants::COUNTRY_CODE_GB;
-        $sArea      = ArrayHelper::getFromArray(1, $aMatches);
-        $sLocal     = ArrayHelper::getFromArray(2, $aMatches);
-        $sExtension = preg_replace('/[^0-9]/', '', ArrayHelper::getFromArray(3, $aMatches));
+        $sArea      = ArrayHelper::get(1, $aMatches);
+        $sLocal     = ArrayHelper::get(2, $aMatches);
+        $sExtension = preg_replace('/[^0-9]/', '', ArrayHelper::get(3, $aMatches));
 
         if (strlen($sArea) !== 4 || strlen($sLocal) !== 7) {
             throw new ValidationException(
