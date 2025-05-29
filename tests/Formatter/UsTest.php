@@ -135,7 +135,7 @@ class UsTest extends TestCase
      * @return Formatter\Us
      * @throws FactoryException
      */
-    private function getFormatter(Resource\Phone $oPhone = null): Formatter\Us
+    private function getFormatter(?Resource\Phone $oPhone = null): Formatter\Us
     {
         /** @var Formatter\Us $oFormatter */
         $oFormatter = Factory::factory('FormatterUS', Constants::MODULE_SLUG);
