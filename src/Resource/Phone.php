@@ -76,7 +76,7 @@ class Phone extends Resource
      * @return Interfaces\Formatter
      * @throws FactoryException
      */
-    public function formatted(Interfaces\Formatter $oFormatter = null): Interfaces\Formatter
+    public function formatted(?Interfaces\Formatter $oFormatter = null): Interfaces\Formatter
     {
         if ($oFormatter !== null) {
 
@@ -105,7 +105,7 @@ class Phone extends Resource
      * @return bool
      * @throws FactoryException
      */
-    public function isValid(Interfaces\Validator $oValidator = null): bool
+    public function isValid(?Interfaces\Validator $oValidator = null): bool
     {
         try {
 
@@ -127,7 +127,7 @@ class Phone extends Resource
      * @throws FactoryException
      * @throws ValidationException
      */
-    public function validate(Interfaces\Validator $oValidator = null)
+    public function validate(?Interfaces\Validator $oValidator = null)
     {
         if (empty($this->country)) {
             throw new ValidationException(

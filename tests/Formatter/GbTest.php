@@ -135,7 +135,7 @@ class GbTest extends TestCase
      * @return Formatter\Gb
      * @throws FactoryException
      */
-    private function getFormatter(Resource\Phone $oPhone = null): Formatter\Gb
+    private function getFormatter(?Resource\Phone $oPhone = null): Formatter\Gb
     {
         /** @var Formatter\Gb $oFormatter */
         $oFormatter = Factory::factory('FormatterGB', Constants::MODULE_SLUG);
