@@ -1,37 +1,50 @@
 {
-    "name": "nails\/module-phone",
-    "keywords": [],
+    "name": "nails/module-phone",
+    "keywords":
+    [],
     "homepage": "http://nailsapp.co.uk/modules/phone",
     "description": "This module provides a unified API for formatting and validating phone numbers.",
     "license": "MIT",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "require": {
+    "require":
+    {
         "ext-json": "*",
-        "nails\/common": "dev-develop"
+        "nails/common": "dev-develop"
     },
-    "require-dev": {
-        "phpunit\/phpunit": "8.*"
+    "require-dev":
+    {
+        "phpunit/phpunit": "9.*",
+        "phpstan/phpstan": "1.*"
     },
-    "autoload": {
-        "psr-4": {
-            "Nails\\Phone\\": "src\/"
+    "scripts":
+    {
+        "test": "./vendor/bin/phpunit",
+        "analyse": "./vendor/bin/phpstan analyse -c .phpstan/config.neon"
+    },
+    "autoload":
+    {
+        "psr-4":
+        {
+            "Nails\\Phone\\": "src/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Test\\Phone\\": "tests\/"
+    "autoload-dev":
+    {
+        "psr-4":
+        {
+            "Test\\Phone\\": "tests/"
         }
     },
-    "extra": {
-        "nails": {
+    "extra":
+    {
+        "nails":
+        {
             "moduleName": "module-phone",
             "type": "module",
             "namespace": "Nails\\Phone\\",
-            "data": {}
+            "data":
+            {}
         }
-    },
-    "scripts": {
-        "test": ".\/vendor\/bin\/phpunit"
     }
 }
