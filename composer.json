@@ -40,7 +40,7 @@
     {
         "nails":
         {
-            "moduleName": "module-phone",
+            "moduleName": "phone",
             "type": "module",
             "namespace": "Nails\\Phone\\",
             "data":
