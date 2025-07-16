@@ -74,12 +74,12 @@ return [
      * A class which represents an object from the database
      */
     'resources' => [
-        'Phone' => function ($mObj): Resource\Phone {
-
+        'Phone' => function ($resource, $model = null): Resource\Phone {
+            //  @todo (Pablo 2025-07-15) - this should be a factory
             if (class_exists('\App\Phone\Resource\Phone')) {
-                return new \App\Phone\Resource\Phone($mObj);
+                return new \App\Phone\Resource\Phone($resource);
             } else {
-                return new Resource\Phone($mObj);
+                return new Resource\Phone($resource);
             }
         },
     ],
